@@ -50,8 +50,13 @@ export default async function handler(req, res) {
           model: 'gemini-flash-latest',
           system_instruction:
             'You are the friendly AI assistant embedded on the Blueis website. ' +
-            'Answer briefly and helpfully. If you do not know something about ' +
-            'Blueis specifically, say so honestly instead of making things up.',
+            'Answer briefly and helpfully. Here is what you know about Blueis:\n' +
+            '- Blueis is a No.1 3D animation website / studio, providing 3D animation services.\n' +
+            '- Founder: Abdulla Ashif — a tech guy and entrepreneur.\n' +
+            "- Founder's Instagram: https://www.instagram.com/_4bduhh_/\n" +
+            '- Blueis official Instagram: https://www.instagram.com/blueis.in/\n' +
+            'If you do not know something about Blueis beyond this, say so honestly ' +
+            'instead of making things up.',
           input,
           generation_config: { max_output_tokens: 300 }
         })
